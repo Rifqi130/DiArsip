@@ -1,0 +1,386 @@
+/* Dokumen Page Styles */
+:root {
+    --primary-blue: #0d6efd;
+    --danger-red: #dc3545;
+    --success-green: #198754;
+    --light-gray: #f8f9fa;
+    --border-color: rgba(0, 0, 0, 0.075);
+}
+
+/* Page Header */
+.page-header {
+    padding: 1rem 0;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* Filter Card */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+    border-bottom: 1px solid var(--border-color);
+    background: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-footer {
+    border-top: 1px solid var(--border-color);
+    padding: 1rem 1.5rem;
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Button Group */
+.btn-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-group .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 6px;
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn-group .btn:hover {
+    background: var(--primary-blue);
+    color: #fff;
+}
+
+.btn-group .btn.active {
+    background: var(--primary-blue);
+    color: #fff;
+}
+
+.btn-group .btn i {
+    margin-right: 0.5rem;
+}
+
+/* Form Controls */
+.form-select-sm,
+.form-control-sm {
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.form-select-sm:focus,
+.form-control-sm:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.input-group-text {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 6px 0 0 6px;
+}
+
+.input-group .form-control {
+    border-radius: 0 6px 6px 0;
+}
+
+/* Dokumen Card */
+.dokumen-card {
+    margin-top: 2rem;
+}
+
+.dokumen-table {
+    margin-bottom: 0;
+}
+
+.dokumen-table thead th {
+    background: var(--light-gray);
+    border-bottom: 2px solid var(--border-color);
+    font-weight: 600;
+    color: #666;
+    padding: 1rem;
+    font-size: 0.875rem;
+}
+
+.dokumen-table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+
+.dokumen-table tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.02);
+}
+
+.dokumen-row td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+.dokumen-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.dokumen-title i {
+    font-size: 1.25rem;
+    color: var(--primary-blue);
+}
+
+.dokumen-title span {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Badges */
+.badge {
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.badge.bg-info {
+    background: rgba(13, 110, 253, 0.1) !important;
+    color: var(--primary-blue) !important;
+}
+
+.badge.bg-light {
+    background: var(--light-gray) !important;
+    border: 1px solid var(--border-color);
+}
+
+/* Action Buttons */
+.btn-outline-primary,
+.btn-outline-danger {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.875rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary {
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary-blue);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(13, 110, 253, 0.2);
+}
+
+.btn-outline-danger {
+    border: 1px solid var(--danger-red);
+    color: var(--danger-red);
+}
+
+.btn-outline-danger:hover {
+    background: var(--danger-red);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(220, 53, 69, 0.2);
+}
+
+.btn-outline-primary i,
+.btn-outline-danger i {
+    margin-right: 0.3rem;
+}
+
+/* Pagination */
+.pagination {
+    margin: 1rem 0 0 0;
+    gap: 0.5rem;
+}
+
+.page-link {
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    color: var(--primary-blue);
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.page-link:hover {
+    background: var(--primary-blue);
+    color: #fff;
+    border-color: var(--primary-blue);
+}
+
+.page-item.active .page-link {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: #fff;
+}
+
+.page-item.disabled .page-link {
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-group .btn {
+        width: 100%;
+    }
+
+    .dokumen-table thead {
+        font-size: 0.8rem;
+    }
+
+    .dokumen-table tbody td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .dokumen-title {
+        font-size: 0.9rem;
+    }
+
+    .btn-outline-primary,
+    .btn-outline-danger {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Sidebar styles for dokumen page */
+.sidebar {
+    width: 260px;
+    background: var(--light-gray);
+    border-right: 1px solid var(--border-color);
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.sidebar-header .fw-bold {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.sidebar-header .text-muted {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.nav {
+    padding: 1rem 0;
+}
+
+.nav-link {
+    padding: 0.75rem 1.5rem;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(13, 110, 253, 0.08);
+    color: var(--primary-blue);
+    border-left: 3px solid var(--primary-blue);
+    padding-left: calc(1.5rem - 3px);
+}
+
+.nav-link i {
+    font-size: 1.25rem;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.sidebar-footer .fw-bold {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.sidebar-footer .btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    border-radius: 6px;
+}
+
+.dashboard-wrapper {
+    min-height: 100vh;
+}
+
+.flex-grow-1 {
+    flex: 1;
+}
+
+/* Main content area */
+.bg-light {
+    background: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--border-color);
+    margin-left: 260px;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: #333 !important;
+    font-size: 1.1rem;
+}
+
+.container-fluid {
+    margin-left: 260px;
+    padding-left: 2rem;
+}
+
+/* Footer */
+.footer {
+    margin-left: 260px;
+    background: #fff;
+    border-top: 1px solid var(--border-color);
+    color: #666;
+    font-size: 0.875rem;
+}

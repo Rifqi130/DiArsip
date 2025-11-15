@@ -1,0 +1,79 @@
+/* Custom styles for the DiArsip login demo */
+:root {
+    --bg: #f6f7f9;
+    --card: #e9ecef;
+    --muted: #6c757d;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    background: var(--bg);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial;
+}
+.page-bg {
+    min-height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(180deg, #ffffff 0%, #f6f7f9 100%);
+}
+.logo {
+    height: 56px;
+    opacity: 0.95;
+}
+.login-outer {
+    width: 88%;
+    max-width: 980px;
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 24px;
+    border-radius: 4px;
+    margin-top: 18px;
+}
+.left-panel {
+    background: transparent;
+}
+.right-panel {
+    display: flex;
+    justify-content: center;
+}
+.inner {
+    background: transparent;
+}
+.form-control {
+    border-radius: 2px;
+    box-shadow: none;
+}
+.btn-primary {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    border-radius: 2px;
+    padding: 10px 14px;
+}
+.info h4 {
+    font-size: 1.05rem;
+}
+.info p {
+    font-size: 0.95rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+    .login-outer {
+        padding: 12px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .right-panel {
+        margin-top: 12px;
+    }
+}
+
+/* subtle inner border like reference */
+.login-outer .inner {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 18px;
+    border-radius: 3px;
+}
