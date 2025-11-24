@@ -393,7 +393,8 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* Mobile (Small phones) */
+@media (max-width: 480px) {
     .container-fluid {
         margin-left: 0;
         padding-left: 1rem;
@@ -402,10 +403,135 @@
 
     .navbar {
         margin-left: 0;
+        padding: 0.5rem 1rem;
     }
 
     .footer {
         margin-left: 0;
+        padding: 0.75rem;
+        font-size: 0.7rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.25rem;
+    }
+
+    .btn-primary {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .kategori-header {
+        padding: 0.75rem;
+        gap: 0.5rem;
+    }
+
+    .kategori-header.sub {
+        padding: 0.5rem 0.75rem;
+        padding-left: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .kategori-name {
+        font-size: 0.9rem;
+    }
+
+    .badge {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .stats-card-mini {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .stats-icon-mini {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+    }
+
+    .stats-info-mini .value {
+        font-size: 1.25rem;
+    }
+
+    .kategori-tree {
+        gap: 0.5rem;
+    }
+
+    .kategori-toggle {
+        width: 24px;
+        height: 24px;
+    }
+
+    .card-header {
+        padding: 0.75rem;
+    }
+
+    .card-body {
+        padding: 0.75rem;
+    }
+
+    .modal-body {
+        padding: 1rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+    .container-fluid {
+        margin-left: 80px;
+        padding-left: 1.5rem;
+        padding-right: 1rem;
+    }
+
+    .navbar {
+        margin-left: 80px;
+    }
+
+    .footer {
+        margin-left: 80px;
+    }
+
+    .sidebar {
+        width: 80px;
+    }
+
+    .sidebar-header {
+        padding: 1rem 0.5rem;
+    }
+
+    .sidebar-header .fw-bold {
+        font-size: 0.9rem;
+    }
+
+    .sidebar-header .text-muted {
+        font-size: 0.65rem;
+    }
+
+    .nav-link {
+        padding: 0.75rem 0.5rem;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .nav-link span {
+        display: none;
+    }
+
+    .nav-link i {
+        font-size: 1.5rem;
+    }
+
+    .sidebar-footer {
+        padding: 1rem 0.5rem;
+    }
+
+    .sidebar-footer .btn {
+        padding: 0.4rem 0.5rem;
+        font-size: 0.7rem;
     }
 
     .page-header h1 {
@@ -436,5 +562,83 @@
 
     .kategori-tree {
         gap: 0.5rem;
+    }
+
+    .card-header {
+        padding: 0.75rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+/* Small Desktop */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container-fluid {
+        margin-left: 260px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .navbar {
+        margin-left: 260px;
+    }
+
+    .footer {
+        margin-left: 260px;
+    }
+
+    .page-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .kategori-tree {
+        gap: 0.75rem;
+    }
+
+    .stats-card-mini {
+        flex-direction: row;
+    }
+
+    .card-header {
+        padding: 0.9rem;
+    }
+
+    .card-body {
+        padding: 1.2rem;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1025px) {
+    .container-fluid {
+        margin-left: 260px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .navbar {
+        margin-left: 260px;
+    }
+
+    .footer {
+        margin-left: 260px;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .kategori-tree {
+        gap: 0.75rem;
+    }
+
+    .card-header {
+        padding: 1.5rem;
+    }
+
+    .card-body {
+        padding: 1.5rem;
     }
 }

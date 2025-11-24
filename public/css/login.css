@@ -58,22 +58,96 @@ body {
     font-size: 0.95rem;
 }
 
-/* Responsive tweaks */
-@media (max-width: 767px) {
-    .login-outer {
-        padding: 12px;
-    }
-    .row {
-        flex-direction: column;
-    }
-    .right-panel {
-        margin-top: 12px;
-    }
-}
-
 /* subtle inner border like reference */
 .login-outer .inner {
     border: 1px solid rgba(0, 0, 0, 0.06);
     padding: 18px;
     border-radius: 3px;
+}
+
+/* Responsive tweaks */
+/* Mobile devices (small phones) */
+@media (max-width: 480px) {
+    .login-outer {
+        width: 95%;
+        padding: 16px;
+        margin: 10px auto;
+    }
+    .login-outer .inner {
+        padding: 12px;
+    }
+    .row {
+        flex-direction: column !important;
+    }
+    .left-panel,
+    .right-panel {
+        padding: 12px !important;
+    }
+    .right-panel {
+        margin-top: 12px;
+    }
+    .logo {
+        height: 40px;
+    }
+    .form-control,
+    .form-check-input {
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+    .btn-primary {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    .info h4 {
+        font-size: 0.95rem;
+    }
+    .info p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+    .login-outer {
+        width: 90%;
+        padding: 16px;
+    }
+    .row {
+        flex-direction: column !important;
+    }
+    .left-panel,
+    .right-panel {
+        padding: 16px !important;
+    }
+    .right-panel {
+        margin-top: 16px;
+    }
+    .logo {
+        height: 48px;
+    }
+    .form-control,
+    .form-check-input {
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+    .btn-primary {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}
+
+/* Small desktop screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .login-outer {
+        width: 92%;
+        max-width: 800px;
+    }
+}
+
+/* Large desktop screens */
+@media (min-width: 1025px) {
+    .login-outer {
+        width: 88%;
+        max-width: 980px;
+    }
 }

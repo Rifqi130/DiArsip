@@ -25,13 +25,14 @@
 
             <footer class="footer">
                 <div class="container-fluid">
-                    <div class="text-muted">&copy; {{ date('Y') }} DiArsip. All rights reserved.</div>
+                    <div class="text-muted" style="text-align: center;">&copy; {{ date('Y') }} DiArsip. All rights reserved.</div>
                 </div>
             </footer>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('js/responsive.js') }}"></script>
     <script src="{{ asset('js/dashboard.js') }}"></script>
     @stack('scripts')
 </body>

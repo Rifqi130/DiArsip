@@ -5,6 +5,7 @@
         </button>
 
         <div class="navbar-brand">
+            <img src="{{ asset('images/logo.png') }}" alt="DiArsip" height="32">
             <img src="{{ asset('images/logo.svg') }}" alt="DiArsip" height="32">
         </div>
 
