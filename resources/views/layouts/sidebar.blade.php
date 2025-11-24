@@ -8,19 +8,19 @@
 
     <ul class="sidebar-menu">
         <li class="menu-item {{ request()->is('dashboard') ? 'active' : '' }}">
-            <a href="{{ url('/dashboard') }}">
+            <a href="{{ route('dashboard') }}">
                 <i class="bx bx-home"></i>
                 <span>Dashboard</span>
             </a>
         </li>
         <li class="menu-item {{ request()->is('documents*') ? 'active' : '' }}">
-            <a href="{{ url('/documents') }}">
+            <a href="{{ route('documents.index') }}">
                 <i class="bx bx-folder"></i>
                 <span>Dokumen</span>
             </a>
         </li>
         <li class="menu-item {{ request()->is('categories*') ? 'active' : '' }}">
-            <a href="{{ url('/categories') }}">
+            <a href="{{ route('categories.index') }}">
                 <i class="bx bx-category"></i>
                 <span>Kategori</span>
             </a>
