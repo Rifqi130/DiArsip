@@ -63,6 +63,7 @@ class DocumentController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'document_number' => 'required|string|unique:documents',
+            'upd' => 'nullable|string|max:255',
             'category_id' => 'required|exists:categories,id',
             'document_date' => 'required|date',
             'description' => 'nullable|string',
@@ -76,6 +77,7 @@ class DocumentController extends Controller
         Document::create([
             'title' => $validated['title'],
             'document_number' => $validated['document_number'],
+            'upd' => $validated['upd'],
             'category_id' => $validated['category_id'],
             'user_id' => Auth::id(),
             'description' => $validated['description'],
@@ -106,6 +108,7 @@ class DocumentController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'document_number' => 'required|string|unique:documents,document_number,' . $document->id,
+            'upd' => 'nullable|string|max:255',
             'category_id' => 'required|exists:categories,id',
             'document_date' => 'required|date',
             'description' => 'nullable|string',

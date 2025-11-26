@@ -40,6 +40,17 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="mb-3">
+                        <label for="upd" class="form-label">UPD</label>
+                        <input type="text" class="form-control @error('upd') is-invalid @enderror" 
+                               id="upd" name="upd" value="{{ old('upd', $document->upd) }}">
+                        @error('upd')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
                         <label for="category_id" class="form-label">Kategori <span class="text-danger">*</span></label>
                         <select class="form-select @error('category_id') is-invalid @enderror" 
                                 id="category_id" name="category_id" required>
@@ -55,8 +66,10 @@
                         @enderror
                     </div>
                 </div>
+            </div>
 
-                <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-6">
                     <div class="mb-3">
                         <label for="document_date" class="form-label">Tanggal Dokumen <span class="text-danger">*</span></label>
                         <input type="date" class="form-control @error('document_date') is-invalid @enderror" 
@@ -67,7 +80,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <div class="mb-3">
                         <label for="status" class="form-label">Status <span class="text-danger">*</span></label>
                         <select class="form-select @error('status') is-invalid @enderror" 
@@ -108,6 +121,7 @@
                 <div class="invalid-feedback d-block">{{ $message }}</div>
                 @enderror
             </div>
+
             <div class="d-flex gap-2">
                 <button type="submit" class="btn btn-primary">
                     <i class="bx bx-save"></i> Simpan
@@ -115,14 +129,16 @@
                 <a href="{{ route('documents.index') }}" class="btn btn-secondary">
                     <i class="bx bx-arrow-back"></i> Batal
                 </a>
-                <form action="{{ route('documents.destroy', $document) }}" method="POST" style="display: inline;">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus dokumen ini?')">
-                        <i class="bx bx-trash"></i> Hapus
-                    </button>
-                </form>
+                <button type="button" class="btn btn-danger" onclick="if(confirm('Yakin ingin menghapus dokumen ini?')) { document.getElementById('deleteForm').submit(); }">
+                    <i class="bx bx-trash"></i> Hapus
+                </button>
             </div>
+        </form>
+
+        <!-- Delete Form -->
+        <form id="deleteForm" action="{{ route('documents.destroy', $document) }}" method="POST" style="display: none;">
+            @csrf
+            @method('DELETE')
         </form>
     </div>
 </div>

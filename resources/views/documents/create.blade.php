@@ -39,6 +39,17 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="mb-3">
+                        <label for="upd" class="form-label">UPD</label>
+                        <input type="text" class="form-control @error('upd') is-invalid @enderror" 
+                               id="upd" name="upd" value="{{ old('upd') }}">
+                        @error('upd')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
                         <label for="category_id" class="form-label">Kategori *</label>
                         <select class="form-select @error('category_id') is-invalid @enderror" 
                                 id="category_id" name="category_id" required>
@@ -54,6 +65,7 @@
                         @enderror
                     </div>
                 </div>
+            </div>
 
                 <div class="col-md-3">
                     <div class="mb-3">

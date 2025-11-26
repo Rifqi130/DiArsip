@@ -12,6 +12,7 @@ class Document extends Model
     protected $fillable = [
         'title',
         'document_number',
+        'upd',
         'category_id',
         'user_id',
         'description',

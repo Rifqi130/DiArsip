@@ -73,6 +73,7 @@
                         <th>No</th>
                         <th>Nomor Dokumen</th>
                         <th>Judul</th>
+                        <th>UPD</th>
                         <th>Kategori</th>
                         <th>Tanggal</th>
                         <th>Status</th>
@@ -86,6 +87,7 @@
                         <td>{{ $documents->firstItem() + $index }}</td>
                         <td><code>{{ $doc->document_number }}</code></td>
                         <td>{{ $doc->title }}</td>
+                        <td>{{ $doc->upd ?? '-' }}</td>
                         <td><span class="badge bg-info">{{ $doc->category->name }}</span></td>
                         <td>{{ $doc->document_date->format('d/m/Y') }}</td>
                         <td>
@@ -116,7 +118,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="8" class="text-center text-muted">Tidak ada dokumen</td>
+                        <td colspan="9" class="text-center text-muted">Tidak ada dokumen</td>
                     </tr>
                     @endforelse
                 </tbody>
